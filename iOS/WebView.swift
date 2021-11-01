@@ -7,6 +7,7 @@
 
 import Foundation
 import WebKit
+import SwiftUI
 
 struct WebView: UIViewRepresentable {
     var html: String
