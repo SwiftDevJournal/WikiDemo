@@ -6,15 +6,27 @@
 //
 
 import SwiftUI
+import Ink
 
 struct PageView: View {
+    @Binding var page: Page
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            TextEditor(text: $page.text)
+            WebView(html: html)
+        }
+    }
+    
+    var html: String {
+        let parser = MarkdownParser()
+        return parser.html(from: page.text)
     }
 }
 
+
 struct PageView_Previews: PreviewProvider {
     static var previews: some View {
-        PageView()
+        PageView(page: .constant(Page()))
     }
 }
