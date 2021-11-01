@@ -12,7 +12,7 @@ The detail view has two views: a text view where you type Markdown and a web vie
 
 ## System Requirements
 
-* Xcode 13.0+ on iOS, Xcode 13.1 on Mac
+* Xcode 13.0+ for iOS version, Xcode 13.1 for Mac version
 * iOS 14+, macOS 11+
 
 ## Adding Pages
