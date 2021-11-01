@@ -19,6 +19,8 @@
 		4D60BB6B273063F500F2CD11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB3C273063F300F2CD11 /* ContentView.swift */; };
 		4D60BB6C273063F500F2CD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D60BB3D273063F500F2CD11 /* Assets.xcassets */; };
 		4D60BB6D273063F500F2CD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D60BB3D273063F500F2CD11 /* Assets.xcassets */; };
+		4D60BB7D2730660A00F2CD11 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7C2730660A00F2CD11 /* Page.swift */; };
+		4D60BB7E2730660A00F2CD11 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7C2730660A00F2CD11 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		4D60BB5E273063F500F2CD11 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D60BB62273063F500F2CD11 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		4D60BB64273063F500F2CD11 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		4D60BB7C2730660A00F2CD11 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 			children = (
 				4D60BB3D273063F500F2CD11 /* Assets.xcassets */,
 				4D60BB3C273063F300F2CD11 /* ContentView.swift */,
+				4D60BB7C2730660A00F2CD11 /* Page.swift */,
 				4D60BB3B273063F300F2CD11 /* Wiki.swift */,
 				4D60BB3A273063F300F2CD11 /* WikiDemoApp.swift */,
 			);
@@ -317,6 +321,7 @@
 			files = (
 				4D60BB66273063F500F2CD11 /* WikiDemoApp.swift in Sources */,
 				4D60BB68273063F500F2CD11 /* Wiki.swift in Sources */,
+				4D60BB7D2730660A00F2CD11 /* Page.swift in Sources */,
 				4D60BB6A273063F500F2CD11 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +332,7 @@
 			files = (
 				4D60BB67273063F500F2CD11 /* WikiDemoApp.swift in Sources */,
 				4D60BB69273063F500F2CD11 /* Wiki.swift in Sources */,
+				4D60BB7E2730660A00F2CD11 /* Page.swift in Sources */,
 				4D60BB6B273063F500F2CD11 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
