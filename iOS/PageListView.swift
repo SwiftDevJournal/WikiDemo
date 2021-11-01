@@ -24,26 +24,28 @@ struct PageListView: View {
                         TextField("", text: $page.title)
                     }
                 }
-                .onDelete { _ in
-                    if selectedPage != nil {
-                        wiki.removePage(title: selectedPage!.title)
-                    }
+                .onDelete(perform: deletePage)
                 }
             }
-            
+            .toolbar {
+                EditButton()
+            }
             .listStyle(SidebarListStyle())
             .navigationTitle("Pages")
             Button(action: { showAddSheet = true }, label: {
                 Label("Add", systemImage: "note.text.badge.plus")
             })
-        }
-        
         .sheet(isPresented: $showAddSheet) {
             AddPageView(wiki: $wiki)
         }
     }
     
+    func deletePage(at offsets: IndexSet) {
+        wiki.pages.remove(atOffsets: offsets)
+    }
 }
+    
+
 
 struct PageListView_Previews: PreviewProvider {
     static var previews: some View {
