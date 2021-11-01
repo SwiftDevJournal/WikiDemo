@@ -27,6 +27,8 @@
 		4D60BB8A2730673E00F2CD11 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB882730673E00F2CD11 /* PageView.swift */; };
 		4D60BB8D2730679700F2CD11 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 4D60BB8C2730679700F2CD11 /* Ink */; };
 		4D60BB90273067A200F2CD11 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 4D60BB8F273067A200F2CD11 /* Ink */; };
+		4D60BB92273067FD00F2CD11 /* AddPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB91273067FD00F2CD11 /* AddPageView.swift */; };
+		4D60BB93273067FD00F2CD11 /* AddPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB91273067FD00F2CD11 /* AddPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		4D60BB82273066CB00F2CD11 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		4D60BB852730671A00F2CD11 /* PageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageListView.swift; sourceTree = "<group>"; };
 		4D60BB882730673E00F2CD11 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		4D60BB91273067FD00F2CD11 /* AddPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 		4D60BB39273063F300F2CD11 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4D60BB91273067FD00F2CD11 /* AddPageView.swift */,
 				4D60BB3D273063F500F2CD11 /* Assets.xcassets */,
 				4D60BB3C273063F300F2CD11 /* ContentView.swift */,
 				4D60BB7C2730660A00F2CD11 /* Page.swift */,
@@ -353,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D60BB66273063F500F2CD11 /* WikiDemoApp.swift in Sources */,
+				4D60BB92273067FD00F2CD11 /* AddPageView.swift in Sources */,
 				4D60BB83273066CB00F2CD11 /* WebView.swift in Sources */,
 				4D60BB68273063F500F2CD11 /* Wiki.swift in Sources */,
 				4D60BB7D2730660A00F2CD11 /* Page.swift in Sources */,
@@ -369,6 +374,7 @@
 				4D60BB69273063F500F2CD11 /* Wiki.swift in Sources */,
 				4D60BB872730671A00F2CD11 /* PageListView.swift in Sources */,
 				4D60BB7E2730660A00F2CD11 /* Page.swift in Sources */,
+				4D60BB93273067FD00F2CD11 /* AddPageView.swift in Sources */,
 				4D60BB6B273063F500F2CD11 /* ContentView.swift in Sources */,
 				4D60BB8A2730673E00F2CD11 /* PageView.swift in Sources */,
 			);
