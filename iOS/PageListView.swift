@@ -23,10 +23,6 @@ struct PageListView: View {
                     TextField("", text: $page.title)
                 }
             }
-            // Select the first page when creating or opening a wiki.
-            .onAppear {
-                selectedPage = wiki.pages.first
-            }
             .onDeleteCommand {
                 if selectedPage != nil {
                     wiki.removePage(title: selectedPage!.title)
