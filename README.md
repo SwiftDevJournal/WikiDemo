@@ -1,6 +1,6 @@
 # WikiDemo
 
-A multiplatform SwiftUI project demonstrating various SwiftUI features, including creating a master-detail interface. I use it as a sample project in the following articles:
+A multiplatform SwiftUI project demonstrating various SwiftUI features, including creating a master-detail interface. It's a multiplatform version of the [MacWikiDemo project](https://github.com/SwiftDevJournal/MacWikiDemo). I use this project as a sample project in the following articles:
 
 * [Creating a Master-Detail Inteface in SwiftUI](https://www.swiftdevjournal.com/creating-a-master-detail-inteface-in-swiftui/)
 * [Using File Wrappers in a SwiftUI App](https://www.swiftdevjournal.com/using-file-wrappers-in-a-swiftui-app/)
