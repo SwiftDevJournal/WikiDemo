@@ -9,31 +9,88 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var wikiDocument: UTType {
+        UTType(importedAs: "com.SwiftDevJournal.wiki")
     }
 }
 
-struct WikiDemoDocument: FileDocument {
-    var text: String
+struct Wiki: FileDocument {
+    var pages: [Page] = []
 
-    init(text: String = "Hello, world!") {
-        self.text = text
+    static var readableContentTypes: [UTType] { [.wikiDocument] }
+
+    init() {
+        // Creating a new wiki creates one Home page.
+        let newPage = Page()
+        newPage.title = "Home"
+        newPage.text = "Type here"
+        pages.append(newPage)
     }
-
-    static var readableContentTypes: [UTType] { [.exampleText] }
-
+    
     init(configuration: ReadConfiguration) throws {
-        guard let data = configuration.file.regularFileContents,
-              let string = String(data: data, encoding: .utf8)
-        else {
+        guard let pagesDirectory = configuration.file.fileWrappers?["Pages"] else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+        
+        if let pageFiles = pagesDirectory.fileWrappers {
+            for pageFile in pageFiles {
+                readPage(pageFile: pageFile.value)
+            }
+        }
+        sortPages()
+    }
+    
+    mutating func readPage(pageFile: FileWrapper) {
+        if let filename = pageFile.filename,
+           let fileData = pageFile.regularFileContents {
+            
+            let page = Page()
+            page.title = filename
+            page.read(data: fileData)
+            pages.append(page)
+        }
     }
     
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = text.data(using: .utf8)!
-        return .init(regularFileWithContents: data)
+        // Create a root directory with a Pages subdirectory containing the pages.
+        let mainDirectory = FileWrapper(directoryWithFileWrappers: [:])
+        let pagesDirectory = FileWrapper(directoryWithFileWrappers: [:])
+        pagesDirectory.preferredFilename = "Pages"
+        mainDirectory.addFileWrapper(pagesDirectory)
+        
+        // Add each page to the Pages folder in the file wrapper.
+        for page in pages {
+            if let data = page.write() {
+                let wrapper = FileWrapper(regularFileWithContents: data)
+                wrapper.preferredFilename = page.title
+                pagesDirectory.addFileWrapper(wrapper)
+            }
+        }
+        
+        return mainDirectory
+    }
+    
+    mutating func addPage(title: String) {
+        let newPage = Page(text: "")
+        newPage.title = title
+        pages.append(newPage)
+        sortPages()
+    }
+    
+    mutating func removePage(title: String) {
+        guard let pageIndex = pages.firstIndex(where: { page in
+            page.title == title
+        }) else {
+            return
+        }
+        
+        pages.remove(at: pageIndex)
+    }
+    
+    mutating func sortPages() {
+        // Sort the pages alphabetically by title.
+        pages.sort {
+            $0.title < $1.title
+        }
     }
 }
