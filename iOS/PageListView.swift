@@ -31,6 +31,7 @@ struct PageListView: View {
             Button(action: { showAddSheet = true }, label: {
                 Label("Add", systemImage: "note.text.badge.plus")
             })
+            Spacer()
             .sheet(isPresented: $showAddSheet) {
                 AddPageView(wiki: $wiki)
             }
