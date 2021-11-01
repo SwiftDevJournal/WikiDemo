@@ -103,10 +103,10 @@
 		4D60BB39273063F300F2CD11 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4D60BB3A273063F300F2CD11 /* WikiDemoApp.swift */,
-				4D60BB3B273063F300F2CD11 /* Wiki.swift */,
-				4D60BB3C273063F300F2CD11 /* ContentView.swift */,
 				4D60BB3D273063F500F2CD11 /* Assets.xcassets */,
+				4D60BB3C273063F300F2CD11 /* ContentView.swift */,
+				4D60BB3B273063F300F2CD11 /* Wiki.swift */,
+				4D60BB3A273063F300F2CD11 /* WikiDemoApp.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
