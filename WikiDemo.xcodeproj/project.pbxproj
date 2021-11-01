@@ -25,6 +25,8 @@
 		4D60BB83273066CB00F2CD11 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB82273066CB00F2CD11 /* WebView.swift */; };
 		4D60BB872730671A00F2CD11 /* PageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB852730671A00F2CD11 /* PageListView.swift */; };
 		4D60BB8A2730673E00F2CD11 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB882730673E00F2CD11 /* PageView.swift */; };
+		4D60BB8D2730679700F2CD11 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 4D60BB8C2730679700F2CD11 /* Ink */; };
+		4D60BB90273067A200F2CD11 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 4D60BB8F273067A200F2CD11 /* Ink */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D60BB8D2730679700F2CD11 /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D60BB90273067A200F2CD11 /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +112,7 @@
 				4D60BB55273063F500F2CD11 /* Tests iOS */,
 				4D60BB61273063F500F2CD11 /* Tests macOS */,
 				4D60BB43273063F500F2CD11 /* Products */,
+				4D60BB8E273067A200F2CD11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +178,13 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		4D60BB8E273067A200F2CD11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +201,9 @@
 			dependencies = (
 			);
 			name = "WikiDemo (iOS)";
+			packageProductDependencies = (
+				4D60BB8C2730679700F2CD11 /* Ink */,
+			);
 			productName = "WikiDemo (iOS)";
 			productReference = 4D60BB42273063F500F2CD11 /* WikiDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +221,9 @@
 			dependencies = (
 			);
 			name = "WikiDemo (macOS)";
+			packageProductDependencies = (
+				4D60BB8F273067A200F2CD11 /* Ink */,
+			);
 			productName = "WikiDemo (macOS)";
 			productReference = 4D60BB4A273063F500F2CD11 /* WikiDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +299,9 @@
 				Base,
 			);
 			mainGroup = 4D60BB34273063F300F2CD11;
+			packageReferences = (
+				4D60BB8B2730679700F2CD11 /* XCRemoteSwiftPackageReference "Ink" */,
+			);
 			productRefGroup = 4D60BB43273063F500F2CD11 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -773,6 +794,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D60BB8B2730679700F2CD11 /* XCRemoteSwiftPackageReference "Ink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Ink";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D60BB8C2730679700F2CD11 /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D60BB8B2730679700F2CD11 /* XCRemoteSwiftPackageReference "Ink" */;
+			productName = Ink;
+		};
+		4D60BB8F273067A200F2CD11 /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D60BB8B2730679700F2CD11 /* XCRemoteSwiftPackageReference "Ink" */;
+			productName = Ink;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D60BB35273063F300F2CD11 /* Project object */;
 }
