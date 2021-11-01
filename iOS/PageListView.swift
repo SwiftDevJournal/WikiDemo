@@ -11,6 +11,8 @@ struct PageListView: View {
     @Binding var wiki: Wiki
     @State private var selectedPage: Page? = nil
     @State private var showAddSheet = false
+    @Environment(\.editMode) private var editMode
+    @State private var disableTextField = true
     
     var body: some View {
         VStack {
@@ -21,7 +23,18 @@ struct PageListView: View {
                     NavigationLink(destination: PageView(page: $page),
                                    tag: page,
                                    selection: $selectedPage) {
+                        // Only allow changing the page's title when someone taps the Edit button.
+                        // I found that too many times tapping on a page title takes me to changing the title when what I really want is to edit the page. People are going to be editing pages way more than renaming them. It makes sense to only allow page renaming when tapping the Edit button.
                         TextField("", text: $page.title)
+                            .disabled(disableTextField)
+                            .onChange(of: editMode?.wrappedValue) { newValue in
+                                if (newValue != nil) && (newValue!.isEditing) {
+                                    disableTextField = false
+                                }
+                                else {
+                                    disableTextField = true
+                                }
+                            }
                     }
                 }
                 .onDelete(perform: deletePage)
