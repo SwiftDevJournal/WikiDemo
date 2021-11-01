@@ -23,7 +23,7 @@ struct PageListView: View {
                     TextField("", text: $page.title)
                 }
             }
-            .onDeleteCommand {
+            .onDelete {
                 if selectedPage != nil {
                     wiki.removePage(title: selectedPage!.title)
                 }
