@@ -21,11 +21,23 @@ Click the Add button at the bottom of the list to add a new page.
 
 ## Renaming Pages
 
+### iOS
+
+Tap the Edit button. Tap on the name of a page to rename it.
+
+### Mac
+
 Select the page from the sidebar and press the Return key to rename the page.
 
 I find that with SwiftUI that all you have to do is select the page to change the page name. I consider it a bug.
 
 ## Deleting Pages
+
+### iOS
+
+Tap the Edit button. Tap the minus button next to the page you want to remove. Tap the Delete button to finish deleting.
+
+### Mac
 
 Select the page and press the Delete key to delete a page.
 
