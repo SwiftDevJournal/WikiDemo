@@ -21,7 +21,6 @@
 		4D60BB6D273063F500F2CD11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D60BB3D273063F500F2CD11 /* Assets.xcassets */; };
 		4D60BB7D2730660A00F2CD11 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7C2730660A00F2CD11 /* Page.swift */; };
 		4D60BB7E2730660A00F2CD11 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7C2730660A00F2CD11 /* Page.swift */; };
-		4D60BB802730668800F2CD11 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7F2730668800F2CD11 /* WebView.swift */; };
 		4D60BB812730668800F2CD11 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7F2730668800F2CD11 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -324,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D60BB66273063F500F2CD11 /* WikiDemoApp.swift in Sources */,
-				4D60BB802730668800F2CD11 /* WebView.swift in Sources */,
 				4D60BB68273063F500F2CD11 /* Wiki.swift in Sources */,
 				4D60BB7D2730660A00F2CD11 /* Page.swift in Sources */,
 				4D60BB6A273063F500F2CD11 /* ContentView.swift in Sources */,
