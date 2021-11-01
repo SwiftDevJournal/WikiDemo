@@ -25,18 +25,18 @@ struct PageListView: View {
                     }
                 }
                 .onDelete(perform: deletePage)
-                }
-            }
-            .toolbar {
-                EditButton()
             }
             .listStyle(SidebarListStyle())
             .navigationTitle("Pages")
             Button(action: { showAddSheet = true }, label: {
                 Label("Add", systemImage: "note.text.badge.plus")
             })
-        .sheet(isPresented: $showAddSheet) {
-            AddPageView(wiki: $wiki)
+            .sheet(isPresented: $showAddSheet) {
+                AddPageView(wiki: $wiki)
+            }
+        }
+        .toolbar {
+            EditButton()
         }
     }
     
