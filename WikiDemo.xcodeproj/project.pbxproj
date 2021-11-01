@@ -30,6 +30,7 @@
 		4D60BB92273067FD00F2CD11 /* AddPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB91273067FD00F2CD11 /* AddPageView.swift */; };
 		4D60BB93273067FD00F2CD11 /* AddPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB91273067FD00F2CD11 /* AddPageView.swift */; };
 		4D60BB95273069CC00F2CD11 /* PageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB94273069CC00F2CD11 /* PageListView.swift */; };
+		4D60BB97273069FE00F2CD11 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB882730673E00F2CD11 /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 				4D60BB3D273063F500F2CD11 /* Assets.xcassets */,
 				4D60BB3C273063F300F2CD11 /* ContentView.swift */,
 				4D60BB7C2730660A00F2CD11 /* Page.swift */,
+				4D60BB882730673E00F2CD11 /* PageView.swift */,
 				4D60BB3B273063F300F2CD11 /* Wiki.swift */,
 				4D60BB3A273063F300F2CD11 /* WikiDemoApp.swift */,
 			);
@@ -161,7 +163,6 @@
 				4D60BB4C273063F500F2CD11 /* Info.plist */,
 				4D60BB4D273063F500F2CD11 /* macOS.entitlements */,
 				4D60BB852730671A00F2CD11 /* PageListView.swift */,
-				4D60BB882730673E00F2CD11 /* PageView.swift */,
 				4D60BB7F2730668800F2CD11 /* WebView.swift */,
 			);
 			path = macOS;
@@ -360,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D60BB66273063F500F2CD11 /* WikiDemoApp.swift in Sources */,
+				4D60BB97273069FE00F2CD11 /* PageView.swift in Sources */,
 				4D60BB92273067FD00F2CD11 /* AddPageView.swift in Sources */,
 				4D60BB83273066CB00F2CD11 /* WebView.swift in Sources */,
 				4D60BB68273063F500F2CD11 /* Wiki.swift in Sources */,
