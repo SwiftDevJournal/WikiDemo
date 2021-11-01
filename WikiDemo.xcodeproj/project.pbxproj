@@ -23,6 +23,7 @@
 		4D60BB7E2730660A00F2CD11 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7C2730660A00F2CD11 /* Page.swift */; };
 		4D60BB812730668800F2CD11 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB7F2730668800F2CD11 /* WebView.swift */; };
 		4D60BB83273066CB00F2CD11 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB82273066CB00F2CD11 /* WebView.swift */; };
+		4D60BB872730671A00F2CD11 /* PageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60BB852730671A00F2CD11 /* PageListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4D60BB7C2730660A00F2CD11 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		4D60BB7F2730668800F2CD11 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		4D60BB82273066CB00F2CD11 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		4D60BB852730671A00F2CD11 /* PageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				4D60BB4C273063F500F2CD11 /* Info.plist */,
 				4D60BB4D273063F500F2CD11 /* macOS.entitlements */,
+				4D60BB852730671A00F2CD11 /* PageListView.swift */,
 				4D60BB7F2730668800F2CD11 /* WebView.swift */,
 			);
 			path = macOS;
@@ -340,6 +343,7 @@
 				4D60BB67273063F500F2CD11 /* WikiDemoApp.swift in Sources */,
 				4D60BB812730668800F2CD11 /* WebView.swift in Sources */,
 				4D60BB69273063F500F2CD11 /* Wiki.swift in Sources */,
+				4D60BB872730671A00F2CD11 /* PageListView.swift in Sources */,
 				4D60BB7E2730660A00F2CD11 /* Page.swift in Sources */,
 				4D60BB6B273063F500F2CD11 /* ContentView.swift in Sources */,
 			);
