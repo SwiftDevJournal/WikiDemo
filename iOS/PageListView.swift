@@ -16,39 +16,26 @@ struct PageListView: View {
         VStack {
             Text("Pages")
                 .font(.title)
-            List($wiki.pages) { $page in
-                NavigationLink(destination: PageView(page: $page),
-                               tag: page,
-                               selection: $selectedPage) {
-                    TextField("", text: $page.title)
+            List {
+                ForEach($wiki.pages) { $page in
+                    NavigationLink(destination: PageView(page: $page),
+                                   tag: page,
+                                   selection: $selectedPage) {
+                        TextField("", text: $page.title)
+                    }
                 }
-            }
-            .onDelete {
-                if selectedPage != nil {
-                    wiki.removePage(title: selectedPage!.title)
-                }
-                
-            }
-            HStack {
-                Button(action: { showAddSheet = true }, label: {
-                    Label("Add", systemImage: "note.text.badge.plus")
-                })
-
-                Spacer()
-
-                Button(action: {
+                .onDelete { _ in
                     if selectedPage != nil {
                         wiki.removePage(title: selectedPage!.title)
                     }
-                    
-                }, label: {
-                    Label("Delete", systemImage: "trash")
-                        .foregroundColor(.red)
-                })
-                    .keyboardShortcut(.delete, modifiers: [])
+                }
             }
-            .padding(.horizontal, 6)
-            .padding(6)
+            
+            .listStyle(SidebarListStyle())
+            .navigationTitle("Pages")
+            Button(action: { showAddSheet = true }, label: {
+                Label("Add", systemImage: "note.text.badge.plus")
+            })
         }
         
         .sheet(isPresented: $showAddSheet) {
