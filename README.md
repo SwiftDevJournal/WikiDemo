@@ -3,6 +3,7 @@
 A multiplatform SwiftUI project demonstrating various SwiftUI features, including creating a master-detail interface. It's a multiplatform version of the [MacWikiDemo project](https://github.com/SwiftDevJournal/MacWikiDemo). I use this project as a sample project in the following articles:
 
 * [Creating a Master-Detail Inteface in SwiftUI](https://www.swiftdevjournal.com/creating-a-master-detail-inteface-in-swiftui/)
+* [Passing Data to SwiftUI Views](https://www.swiftdevjournal.com/passing-data-to-swiftui-views/)
 * [Using File Wrappers in a SwiftUI App](https://www.swiftdevjournal.com/using-file-wrappers-in-a-swiftui-app/)
 * [Removing Items from SwiftUI Lists in Mac Apps](https://www.swiftdevjournal.com/removing-items-from-swiftui-lists-in-mac-apps/)
 * [Disable a Text Field in a SwiftUI List Until Tapping Edit Button](https://www.swiftdevjournal.com/disable-a-text-field-in-a-swiftui-list-until-tapping-edit-button/)
