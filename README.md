@@ -54,6 +54,7 @@ You may have to press the Esc key afer selecting the page to select the page ins
 * The `Wiki.swift` and `Page.swift` files have the code for working with file wrappers.
 * The `PageListView.swift` and `Wiki.swift` files have the code for list item removal.
 * The `PageListView.swift` file in the iOS folder has code for disabling the text fields in the page list until someone taps the Edit button on iOS.
+* The `WebView.swift` files in the iOS and Mac folders have code for wrapping UIKit and AppKit views to use in a SwiftUI app.
 
 ## Credits
 
