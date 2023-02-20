@@ -7,6 +7,7 @@ A multiplatform SwiftUI project demonstrating various SwiftUI features, includin
 * [Using File Wrappers in a SwiftUI App](https://www.swiftdevjournal.com/using-file-wrappers-in-a-swiftui-app/)
 * [Removing Items from SwiftUI Lists in Mac Apps](https://www.swiftdevjournal.com/removing-items-from-swiftui-lists-in-mac-apps/)
 * [Disable a Text Field in a SwiftUI List Until Tapping Edit Button](https://www.swiftdevjournal.com/disable-a-text-field-in-a-swiftui-list-until-tapping-edit-button/)
+* [Using a UIKit or AppKIt View in SwiftUI](https://www.swiftdevjournal.com/using-a-uikit-or-appkit-view-in-swiftui/)
 
 The master view shows a list of pages. Select a page to show the page's contents in the detail view.
 
