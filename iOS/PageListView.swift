@@ -40,7 +40,7 @@ struct PageListView: View {
                 
             }
             .listStyle(SidebarListStyle())
-            .navigationTitle("Pages")
+            
             Button(action: { showAddSheet = true }, label: {
                 Label("Add", systemImage: "note.text.badge.plus")
             })
