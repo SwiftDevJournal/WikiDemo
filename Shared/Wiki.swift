@@ -44,8 +44,14 @@ struct Wiki: FileDocument {
         if let filename = pageFile.filename,
            let fileData = pageFile.regularFileContents {
             
+            let fileComponents = filename.components(separatedBy: ".txt")
+            if fileComponents.isEmpty {
+                return
+            }
+            
             let page = Page()
-            page.title = filename
+            // Strip the .txt extension to display the page title.
+            page.title = fileComponents.first ?? filename
             page.read(data: fileData)
             pages.append(page)
         }
