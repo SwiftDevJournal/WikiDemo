@@ -68,7 +68,7 @@ struct Wiki: FileDocument {
         for page in pages {
             if let data = page.write() {
                 let wrapper = FileWrapper(regularFileWithContents: data)
-                wrapper.preferredFilename = page.title
+                wrapper.preferredFilename = page.title + ".txt"
                 pagesDirectory.addFileWrapper(wrapper)
             }
         }
