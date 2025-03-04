@@ -7,6 +7,7 @@
 
 import Foundation
 
+@Observable
 class Page: Identifiable, Equatable, Hashable {
     let id = UUID()
     var title: String = "Page"
