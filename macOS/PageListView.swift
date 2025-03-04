@@ -33,8 +33,6 @@ struct PageListView: View {
                     Label("Add", systemImage: "note.text.badge.plus")
                 })
 
-                Spacer()
-
                 Button(action: {
                     if selectedPage != nil {
                         wiki.removePage(title: selectedPage!.title)
@@ -46,8 +44,7 @@ struct PageListView: View {
                 })
                     .keyboardShortcut(.delete, modifiers: [])
             }
-            .padding(.horizontal, 6)
-            .padding(6)
+            .padding()
         }
         
         .sheet(isPresented: $showAddSheet) {
