@@ -56,6 +56,12 @@ You may have to press the Esc key afer selecting the page to select the page ins
 * The `PageListView.swift` file in the iOS folder has code for disabling the text fields in the page list until someone taps the Edit button on iOS.
 * The `WebView.swift` files in the iOS and Mac folders have code for wrapping UIKit and AppKit views to use in a SwiftUI app.
 
+## Navigation Split View Version
+
+The `ios17` branch contains a version of the app that uses the Observation framework and uses `NavigationSplitView` instead of the deprecated `NavigationView`. This version requires iOS 17+ for the iOS version and macOS 14+ for the Mac version. You must be running Xcode 15+ to edit this version on your Mac.
+
+This version is a work in progress. The iOS version has a selection bug where selecting a page from the page list sets the selection to nil. You have to select the page a second time to view and edit its contents in the detail view.
+
 ## Credits
 
 This project uses the [Ink Markdown parser](https://github.com/JohnSundell/Ink) by John Sundell.
