@@ -10,14 +10,21 @@ import SwiftUI
 struct ContentView: View {
     @Binding var wiki: Wiki
     @State private var showAddSheet = false
-    // Need a way to access the selected page.
+    @State var selectedPage: Page? = nil
     
     var body: some View {
-        NavigationView {
-            PageListView(wiki: $wiki)
-            PageView(page: .constant(Page(text: "")))
+        NavigationSplitView {
+            PageListView(wiki: $wiki, selectedPage: $selectedPage)
+                .navigationDestination(item: $selectedPage) { selection in
+                    PageView(page: selection)
+                }
+                .navigationSplitViewColumnWidth(ideal: 192)
+        } detail: {
+            Text("Select a page to view its contents.")
         }
-        
+        .onAppear {
+            selectedPage = wiki.pages.first
+        }
     }
     
 }
