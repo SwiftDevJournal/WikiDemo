@@ -62,6 +62,14 @@ The `ios17` branch contains a version of the app that uses the Observation frame
 
 This version is a work in progress. The iOS version has a selection bug where selecting a page from the page list sets the selection to nil. You have to select the page a second time to view and edit its contents in the detail view.
 
+### Why use @Binding instead of @Bindable with a class?
+
+If you are wondering why the `selectedPage` property in `PageListView.swift` uses `@Binding` instead of `@Bindable` when `Page` is a class, it's to avoid a build error. My initial attempt was to use `@Binding`, but I got the following error:
+
+> 'init(wrappedValue:)' is unavailable: The wrapped value must be an object that conforms to Observable
+
+There is no build error when using `@Binding`.
+
 ## Credits
 
 This project uses the [Ink Markdown parser](https://github.com/JohnSundell/Ink) by John Sundell.
