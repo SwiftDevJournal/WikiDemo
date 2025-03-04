@@ -9,7 +9,7 @@ import SwiftUI
 import Ink
 
 struct PageView: View {
-    @Binding var page: Page
+    @Bindable var page: Page
     
     var body: some View {
         HStack {
@@ -27,6 +27,6 @@ struct PageView: View {
 
 struct PageView_Previews: PreviewProvider {
     static var previews: some View {
-        PageView(page: .constant(Page()))
+        PageView(page: Page())
     }
 }
