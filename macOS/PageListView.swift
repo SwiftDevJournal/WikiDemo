@@ -9,29 +9,24 @@ import SwiftUI
 
 struct PageListView: View {
     @Binding var wiki: Wiki
-    @State private var selectedPage: Page? = nil
+    @Binding var selectedPage: Page?
     @State private var showAddSheet = false
     
     var body: some View {
         VStack {
-            Text("Pages")
-                .font(.title)
-            List($wiki.pages) { $page in
-                NavigationLink(destination: PageView(page: $page),
-                               tag: page,
-                               selection: $selectedPage) {
-                    TextField("", text: $page.title)
+            List(selection: $selectedPage) {
+                Section(header: Text("Pages")) {
+                    ForEach($wiki.pages, id: \.id) { $page in
+                        NavigationLink(value: page) {
+                            TextField("", text: $page.title)
+                        }
+                    }
                 }
-            }
-            // Select the first page when creating or opening a wiki.
-            .onAppear {
-                selectedPage = wiki.pages.first
             }
             .onDeleteCommand {
                 if selectedPage != nil {
                     wiki.removePage(title: selectedPage!.title)
                 }
-                
             }
             HStack {
                 Button(action: { showAddSheet = true }, label: {
@@ -64,6 +59,6 @@ struct PageListView: View {
 
 struct PageListView_Previews: PreviewProvider {
     static var previews: some View {
-        PageListView(wiki: .constant(Wiki()))
+        PageListView(wiki: .constant(Wiki()), selectedPage: .constant(Page()))
     }
 }
